@@ -10,9 +10,16 @@ Python 3.6 + Flask with MySQL
     - healthcheck (On not-UNIX OS (such as Windows) change *os.uname()* to *os.name* or even better to *platofrm.uname()* with *import platform* in *healthcheck/\_\_init\_\_.py* in function *get_os()*)
 
 ### HOW TO RUN:
-1) in **app.py** set *SERVER_PORT*, *DB_NAME*, *DB_HOST*, *DB_USER*, *DB_PASS*
+1) in **app.py** configure:
+
+* *SERVER_PORT* (default=5002)
+* *DB_NAME* (default=raamatukogu) 
+  * *[**WARNING**] Database will be deleted if exists and created again with the required tables*
+* *DB_HOST* (default=localhost)
+* *DB_USER* (default=root)
+* *DB_PASS* (default='')
   
-  *[WARNING] Database will be deleted if exists and created again with required tables*
+  
   
 2) Create database, tables and procedures
 ```python

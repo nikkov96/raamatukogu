@@ -7,10 +7,10 @@ Python 3.6 + Flask with MySQL
   - pip
     - flask
     - flask_mysql
-    - healthcheck (On not-UNIX OS (Windows) need to change *os.uname()* to *os.name* in *healthcheck/\_\_init\_\_.py* in function *get_os()*)
+    - healthcheck (On not-UNIX OS (such as Windows) change *os.uname()* to *os.name* or even better to *platofrm.uname()* with *import platform* in *healthcheck/\_\_init\_\_.py* in function *get_os()*)
 
 ### HOW TO RUN:
-1) in app.py set *SERVER_PORT*, *DB_NAME*, *DB_HOST*, *DB_USER*, *DB_PASS*
+1) in **app.py** set *SERVER_PORT*, *DB_NAME*, *DB_HOST*, *DB_USER*, *DB_PASS*
 2) Create database, tables and procedures
 ```
 python sql.py

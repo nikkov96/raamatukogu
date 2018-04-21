@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="est">
+  <head>
+    <title>Raamatukogu | laenamine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://developer.avego.com/mobilesite/bootstrap-3.0.0/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+    <link href="../static/css/tabs.css" rel="stylesheet">
+    <script src="../static/js/jquery-1.11.2.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../static/js/tagasta.js"></script>
+
+      <style>
+           #back{
+              margin-bottom: 30px;
+          }
+          input{
+              margin: 10px auto;
+          }
+      </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header" style="text-align: center">
+          <h3 class="text-muted">Raamatukogu</h3>
+          <div class="">
+              <ul class="nav navbar-nav">
+                  <li><a href="/" class="btn btn-primary btn-lg active" id="back" role="button" aria-pressed="true">Tagasi</a></li>
+              </ul>
+          </div>
+      </div>
+
+      <div class="jumbotron">
+        <h1>Tagastaja andmed</h1>
+        <br>
+          <p id="error" style="color: red"></p>
+        <form class="form">
+            <input type="hidden" name="kood" value="{{data}}">
+            <label for="inputTelefon" class="sr-only">Telefon</label>
+            <input type="number" name="telefon" id="inputTelefon" class="form-control" placeholder="Telefon" required>
+            <label for="inputKood" class="sr-only">Isikukood</label>
+            <input type="number" name="isikukood" id="inputKood" class="form-control" placeholder="Isikukood" required>
+
+
+            <button id="tagasta" class="btn btn-lg btn-primary btn-block" type="button">Tagasta</button>
+        </form>
+      </div>
+
+
+
+
+    </div>
+  </body>
+</html>
+

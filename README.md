@@ -7,7 +7,8 @@ Python 3.6 + Flask with MySQL
   - pip
     - flask
     - flask_mysql
-    - healthcheck (On not-UNIX OS (such as Windows) change *os.uname()* to *os.name* or even better to *platofrm.uname()* with *import platform* in *healthcheck/\_\_init\_\_.py* in function *get_os()*)
+    - healthcheck (On not-UNIX OS (such as Windows) change *os.uname()* to *os.name* or even better to *platform.uname()* with *import platform* in *healthcheck/\_\_init\_\_.py* in function *get_os()*)
+      - six
 
 ### HOW TO RUN:
 1) in **app.py** configure:
